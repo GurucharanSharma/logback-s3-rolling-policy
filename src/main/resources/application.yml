@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: ${SPRING_APPLICATION_NAME:logback-s3-rolling-policy}
+    version:
+      current: ${APP_CURRENT_VERSION:v1}
+    env:
+      APP_LOGGING_LEVEL: ${APP_LOGGING_LEVEL:INFO}
+  webflux:
+    hiddenmethod:
+      filter:
+        enabled: ${HIDDEN_METHOD_FILTER_ENABLED:false}
+  codec:
+    max-in-memory-size: 10MB
+
+logging:
+  level:
+    root: ${APP_LOGGING_LEVEL:DEBUG}
+    org.springframework.web: ${APP_LOGGING_LEVEL:DEBUG}
+    com.gurucharan.logbacks3rollingpolicy: ${APP_LOGGING_LEVEL:DEBUG}
+    org.hibernate: ${APP_LOGGING_LEVEL:DEBUG}
+
+server:
+  port: ${APP_PORT:8080}
+
+aws:
+  account:
+    region: "ap-south-1"
+    access-key: ${AWS_ACCESS_KEY:AKIAZ3ZYJGIPHH5I3SFT}
+    secret-key: ${AWS_SECRET_KEY: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}
+
+management:
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    web:
+      server:
+        auto-time-requests: true
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
