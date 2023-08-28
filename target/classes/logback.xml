@@ -6,8 +6,8 @@
     </encoder>
     <rollingPolicy class="com.gurucharan.logbacks3rollingpolicy.policy.S3FixedWindowRollingPolicy">
       <fileNamePattern>logs/myapp.%i.log.gz</fileNamePattern>
-      <awsAccessKey>AKIAZ3ZYJGIPHH5I3SFT</awsAccessKey>
-      <awsSecretKey>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</awsSecretKey>
+      <awsAccessKey></awsAccessKey>
+      <awsSecretKey></awsSecretKey>
       <s3BucketName>gcs-aws-app-logs</s3BucketName>
       <s3FolderName>logs/%d{yyyy/MM/dd}</s3FolderName>
       <rolloverOnExit>true</rolloverOnExit>
