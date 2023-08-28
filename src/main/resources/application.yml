@@ -25,8 +25,8 @@ server:
 aws:
   account:
     region: "ap-south-1"
-    access-key: ${AWS_ACCESS_KEY:AKIAZ3ZYJGIPHH5I3SFT}
-    secret-key: ${AWS_SECRET_KEY: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}
+    access-key: ${AWS_ACCESS_KEY:}
+    secret-key: ${AWS_SECRET_KEY:}
 
 management:
   metrics:
